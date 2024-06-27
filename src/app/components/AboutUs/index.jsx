@@ -5,7 +5,7 @@ import bebel from "@/app/assets/images/bebel.png";
 
 export default function AboutUs() {
     return(
-        <section className="bg-[#FEF2D4]">
+        <section className="bg-[#FEF2D4]" id='about'>
             <div className="text-[#84281f] text-center text-4xl font-extrabold py-2">
                 <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                     <div class="flex justify-center lg:md:justify-start lg:mt-0 lg:col-span-5">

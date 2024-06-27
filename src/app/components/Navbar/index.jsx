@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from "@/app/assets/images/logo.png";
+import logo from "@/app/assets/images/delicias-bebel-logo.jpg";
 
 export default function Navbar() {
   const [isToggleOpen, setIsToggleOpen] = useState(false)
@@ -120,7 +120,7 @@ export default function Navbar() {
                         role="menuitem"
                         aria-haspopup="false"
                         className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-[#eaa558] focus:text-[#eaa558] focus:outline-none focus-visible:outline-none lg:px-8"
-                        href="#address"
+                        href="#contact"
                     >
                         <span>Endereço</span>
                     </Link>
