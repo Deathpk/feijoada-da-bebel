@@ -38,7 +38,7 @@
 }
 
 .hero-img {
-  background-image: url(assets/images/feijoada.jpeg);
+  background-image: url(assets/images/fogao.jpeg);
 }
 
 .cursive-title {
@@ -47,7 +47,6 @@
 
 .aventine-title {
   font-family: 'Aventine', sans-serif;
-  color: #fff;
 }
 
 body {

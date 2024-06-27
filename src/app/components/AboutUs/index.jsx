@@ -18,7 +18,7 @@ export default function AboutUs() {
                     </div>  
                     <div class="mr-auto place-self-center lg:col-span-7">
                         <h1 class="max-w-2xl mb-4 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Afinal, quem é Bebel?</h1>
-                        <p class="max-w-2xl mb-6 font-light text-[#84281f] lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Isabel Cristina, 15 anos de experiência com a culinária Brasileira, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo accusantium magni nisi fugit! Incidunt sed reiciendis accusamus fugiat numquam eos, nesciunt nulla! Quos incidunt qui minus, aperiam pariatur possimus earum.</p>
+                        <p class="max-w-2xl mb-6 font-semibold text-[#84281f] text-lg lg:mb-8 lg:text-2xl dark:text-gray-400">Olá, me chamo Isabel Cristina, tenho 59 anos e sou apaixonada por cozinhar desde jovem. Sempre recebi muitos elogios pela minha habilidade culinária, então decidi começar a compartilhar minha comida com outras famílias.</p>
                     </div>              
                 </div>
             </div>
