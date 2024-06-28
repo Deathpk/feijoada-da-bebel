@@ -3,10 +3,32 @@
 import React, { useState } from "react";
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from "@/app/assets/images/delicias-bebel-logo.jpg";
+import logo from "@/app/assets/images/delicias-bebel-logo.jpeg";
 
 export default function Navbar() {
-  const [isToggleOpen, setIsToggleOpen] = useState(false)
+  const [isToggleOpen, setIsToggleOpen] = useState(false);
+  const navLinks = [
+    {
+      href: '#home',
+      label: 'Inicio'
+    },
+    {
+      href: '#about',
+      label: 'Sobre'
+    },
+    {
+      href: '#menu',
+      label: 'Cardápio'
+    },
+    {
+      href: '#contact',
+      label: 'Contato'
+    },
+    {
+      href: '#contact',
+      label: 'Endereço'
+    },
+  ];
     return (
       <>
         {/*<!-- Component: Basic Navbar --> */}
@@ -22,12 +44,12 @@ export default function Navbar() {
                 id="bebel-logo"
                 aria-label="Bebel logo"
                 aria-current="page"
-                className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1"
+                className="flex items-center gap-2 whitespace-nowrap py-3 text-lg focus:outline-none lg:flex-1 overflow-hidden"
                 href="#"
               >
                 <Image
                     src={logo}
-                    className="h-24 w-24 p-2 rounded-full"
+                    className="h-28 w-28  rounded-full"
                     width={300}
                     height={300}
                     alt="Bebel's Logo"
@@ -71,60 +93,19 @@ export default function Navbar() {
                     : "invisible opacity-0"
                 }`}
               >
-                <li role="none" className="flex items-stretch">
-                  <Link
-                    role="menuitem"
-                    aria-haspopup="false"
-                    className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-[#eaa558] focus:text-[#eaa558] focus:outline-none focus-visible:outline-none lg:px-8"
-                    href="#home"
-                  >
-                    <span>Inicio</span>
-
-                  </Link>
-                </li>
-                <li role="none" className="flex items-stretch">
-                    <Link
+                {navLinks.map((item, index) => (
+                    <li key={index} role="none" className="flex items-stretch">
+                      <Link
+                        onClick={() => setIsToggleOpen(!isToggleOpen)}
                         role="menuitem"
                         aria-haspopup="false"
                         className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-[#eaa558] focus:text-[#eaa558] focus:outline-none focus-visible:outline-none lg:px-8"
-                        href="#about"
-                    >
-                        <span>Sobre</span>
-                    </Link>
-                </li>
-
-                <li role="none" className="flex items-stretch">
-                    <Link
-                        role="menuitem"
-                        aria-haspopup="false"
-                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-[#eaa558] focus:text-[#eaa558] focus:outline-none focus-visible:outline-none lg:px-8"
-                        href="#menu"
-                    >
-                        <span>Cardápio</span>
-                    </Link>
-                </li>
-
-                <li role="none" className="flex items-stretch">
-                    <Link
-                        role="menuitem"
-                        aria-haspopup="false"
-                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-[#eaa558] focus:text-[#eaa558] focus:outline-none focus-visible:outline-none lg:px-8"
-                        href="#contact"
-                    >
-                        <span>Contato</span>
-                    </Link>
-                </li>
-
-                <li role="none" className="flex items-stretch">
-                    <Link
-                        role="menuitem"
-                        aria-haspopup="false"
-                        className="flex items-center gap-2 py-4 transition-colors duration-300 hover:text-[#eaa558] focus:text-[#eaa558] focus:outline-none focus-visible:outline-none lg:px-8"
-                        href="#contact"
-                    >
-                        <span>Endereço</span>
-                    </Link>
-                </li>
+                        href={item.href}
+                      >
+                        <span>{item.label}</span>
+                      </Link>
+                    </li>
+                ))}
               </ul>
             </nav>
           </div>
