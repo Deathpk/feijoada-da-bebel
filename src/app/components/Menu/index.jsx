@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import feijoadaItem from '@/app/assets/images/feijoada-item.jpeg';
 import tropeiroItem from '@/app/assets/images/tropeiro-item.jpeg';
+import dobradinhaItem from '@/app/assets/images/dobradinha-item.jpeg';
 
 export default function Menu() {
     let whatsAppNumber = "553197283666";
@@ -16,9 +17,15 @@ export default function Menu() {
         },
         {
             title: "Tropeiro",
-            ingredients: "Feijão preto, Carne seca, Orelha de porco, Rabinho, Pé de porco, Lombo, Paio, Linguiça Portuguesa, Cebola, Folhas de Louro, Pimenta do reino, Laranja.",
+            ingredients: "Bacon, pernil, linguiça calabresa, torresmo, couve e ovo.",
             image: tropeiroItem,
             wppLink: `${apiLink} um Tropeiro.`
+        },
+        {
+            title: "Dobradinha",
+            ingredients: "Dobradinha, feijão branco, calabresa e cheiro verde.",
+            image: dobradinhaItem,
+            wppLink: `${apiLink} uma Dobradinha.`
         },
     ];
 
